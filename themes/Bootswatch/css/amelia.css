@@ -57,6 +57,12 @@ img {
     margin-right: 5px;
 }
 
+.banner-pic {
+    height: 120px;
+    width: 220px;
+    float: right;
+    border: none;
+}
 
 audio,
 canvas,
