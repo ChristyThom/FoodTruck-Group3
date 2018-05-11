@@ -43,9 +43,10 @@ get_header(); #defaults to theme header or header_inc.php
 <h1>Welcome To the Magic World of Gourmet HotDogs</h1>
 
 <h2>At JGC<sup>2</sup> HotDogs we take our HotDogs Seriously!! </h2>
-<p>    
- Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger <img src="images/gourmet-dog.png" alt="gourmet hot-dog picture">   </p>
-    
+<p> 
+<img src="images/gourmet-hotdog.jpg" alt="gourmet hot-dog picture">
+ Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. 
+De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger    </p>
 </div>
 <?php
 
