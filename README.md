@@ -1,10 +1,2 @@
-# FoodTruck-Group3
-
-For our group project we'll be  building a PHP application that allows a user to select 
-items from a menu as if they are ordering from a food truck.
-
-This application can: 
-    - Allow items to be chosen from a form
-    - Display the items chosen and add and display the total cost
-    - Allow more than one of each item to be purchased
-    
+# nm-wdk-1
+Web Development Kit, which can be used as a starting point for building a custom PHP application
