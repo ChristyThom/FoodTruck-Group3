@@ -22,6 +22,12 @@ body {
     background-repeat: no-repeat;
 }
 
+.background {
+    background-color: rgba(13,116,123,.65);
+    border-radius: 6px;
+    padding: 10px;
+}
+
 audio,
 canvas,
 video {
