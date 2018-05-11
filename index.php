@@ -34,10 +34,11 @@ $config->nav1 = array("page.php"=>"New Page!") + $config->nav1; #add a new page 
 get_header(); #defaults to theme header or header_inc.php
 ?>
 <div class="jumbotron" style="margin-top:.5em;">
-        <img class="banner-pic" src="images/gourmet-dog.png" alt="gourmet hotdog">
-	<h1><?=$config->banner;?></h1>
-	<p><em><?=$config->slogan;?></em></p>
-	<a href="dog-shop.php" target="_blank" class="btn btn-primary btn-lg">Get Chowing!</a>
+
+       	<h1><?=$config->banner;?></h1>
+	<p><em><?=$config->slogan;?></em>         <img class="banner-pic" src="images/gourmet-dog.png" alt="gourmet hotdog">
+
+	<a href="dog-shop.php" target="_blank" class="btn btn-primary btn-lg">Get Chowing!</a></p>
 
 </div>
 
@@ -47,8 +48,8 @@ get_header(); #defaults to theme header or header_inc.php
 <h2>At JGC<sup>2</sup> HotDogs we take our HotDogs Seriously!! </h2>
 <p> 
 <img src="images/gourmet-hotdog.jpg" alt="gourmet hot-dog picture">
- Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. 
-De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger    </p>
+<em class="title">JGC<sup>2</sup></em> <em class="name">HotDogs</em>   are levels of gourmet beyond your wildest hotdog dreams! We specialize in having varied meat choices including kosher beef, chicken sausage, beer boiled and grilled bratwurst, and a vegan dog option -- all spiral cut and grilled fresh! We believe in fresh homemade exotic toppings including a daily special guacamole, homemade sauerkraut, in-house fresh pickled relish, meat and vegan chili, along with standard topping options all designed to make your hotdog fantasies come true! Put together your gourmet <em class="name">JGC<sup>2</sup> Dog</em> and it will be wrapped and ready to pick up 10 minutes from the time you order!</p>
+    
 </div>
 <?php
 
