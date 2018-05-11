@@ -34,9 +34,11 @@ $config->nav1 = array("page.php"=>"New Page!") + $config->nav1; #add a new page 
 get_header(); #defaults to theme header or header_inc.php
 ?>
 <div class="jumbotron" style="margin-top:.5em;">
+        <img class="banner-pic" src="images/gourmet-dog.png" alt="gourmet hotdog">
 	<h1><?=$config->banner;?></h1>
 	<p><em><?=$config->slogan;?></em></p>
 	<a href="dog-shop.php" target="_blank" class="btn btn-primary btn-lg">Get Chowing!</a>
+
 </div>
 
 <div class="background">
