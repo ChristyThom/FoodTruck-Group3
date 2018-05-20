@@ -8,20 +8,19 @@
  * There are references to include files common_inc.php, which stores utility functions 
  * and credentials_inc.php which stores database credentials 
  *
- * @package nmCommon
- * @author Bill Newman <williamnewman@gmail.com>
- * @version 2.3 2015/07/06 
- * @link http://www.newmanix.com/ 
+ * @author CALVIN K CALVO, JESSE HERNANDEZ
+ * @version 1.0 2018/05/15
+ * @link http://jesseh-codes.com/foodtruck3/
  * @license https://www.apache.org/licenses/LICENSE-2.0
  * @see common_inc.php
- * @see credentials_inc.php
  * @see custom_inc.php  
  * @todo none
  */
+
 # START SETTINGS (show or hide page errors, turn on/off error logging)---------------------------------------------
 # We can un-comment the line below to either see default errors (1) or shut off visual errors completely (0). 
 //ini_set('error_reporting', E_ALL | E_STRICT);  # E_ALL | E_STRICT = currently tracking all errors & warnings
-$sub_folder = 'ft3-hotdogs/';//If app installed in subfolder, place here.  name of folder, no leading or trailing forward or backslash
+$sub_folder = 'foodtruck3/';//If app installed in subfolder, place here.  name of folder, no leading or trailing forward or backslash
 define('SHOW_ALL_ERRORS', true); # TRUE = SHOW ALL SITE ERRORS - if FALSE must be logged in as ADMIN to view errors
 define('LOG_ALL_ERRORS', true); # TRUE = TRACK ALL ERRORS IN ERROR LOG FILE (UPDATED 7/14 FOR ZEPHIR!)
 define('SECURE',false); # true forces secure connection, https, for all site pages
@@ -58,7 +57,7 @@ define('INCLUDE_PATH', PHYSICAL_PATH . 'inc_0700/'); # Path to PHP include files
 //define('INCLUDE_PATH', '/home/classes/horsey01/inc_cotlets/'); #Path to PHP include files - OUTSIDE WEB ROOT
 define('LOG_PATH', INCLUDE_PATH . 'log/'); # Log files are stored in the PHP include folder
 define('ADMIN_PATH', VIRTUAL_PATH . 'admin/'); # Admin files are in subfolder
-define('SUPPORT_EMAIL', 'christyraethom@gmail.com'); # Email of site support
+define('SUPPORT_EMAIL', 'jesse@jesseh-codes.com'); # Email of site support
 define('PREFIX', 'ft3_'); #Adds uniqueness to DB table names.  Limits hackability, naming collisions.  In WordPress the prefix is wp_
 define('THIS_PAGE', basename($_SERVER['PHP_SELF'])); # Current page name, stripped of folder info - (saves resources)
 # END CONSTANTS & PATHS (universal file paths & values)--------------------------------------------------------------------
@@ -73,12 +72,12 @@ include INCLUDE_PATH . 'MyAutoLoader.php'; #Allows multiple versions of AutoLoad
 # CONTENT CONFIGURATION AREA (theme, content areas & nav arrays for header/footer )-----------------------------------------
 $config->theme = 'Bootswatch'; #default theme (header/footer combo) see 'Themes' folder for others and info
 $config->style = 'amelia.css'; #currently only Bootswatch Theme uses style to switch look & feel
-$config->slogan = 'HotDogs - The King of Food Groups';
-$config->metaDescription = 'Welcome JGC<sup>2</sup> HotDogs - No Bark All Bite!';
-$config->metaKeywords = 'HotDogs, Gourmet Dogs, Hot Dogs, ';
+$config->slogan = 'Order Your Gourmet Hot Dogs!';
+$config->metaDescription = 'Welcome to our site! Our Hot Dogs are better!';
+$config->metaKeywords = 'Hot Dogs, Beef, Vegan, German Bratwurst, Relish';
 $config->metaRobots = 'no index, no follow';
-$config->banner = 'JGC<sup>2</sup> HotDogs'; #goes inside header - can be overwritten
-$config->copyright = 'JGC<sup>2</sup> HotDogs &copy; 2018 - ' . date('Y'); #goes inside footer - can be overwritten
+$config->banner = '<img src="images/hotdog.svg" alt="hot-dog" width="20" style="filter: drop-shadow(8px 6px 9px rgba(0, 0, 0, 0.5));">'; #goes inside header - can be overwritten
+$config->copyright = 'Food Truck 3 &copy; ' . date('Y'); #goes inside footer - can be overwritten
 
 $config->sidebar1 = '
 <h3 align="center">Sidebar 1</h3>
@@ -97,11 +96,12 @@ change it on a page by page basis by altering config settings inside individual 
 #add Admin link to nav1 if not Bootswatch theme
 if(startSession() && isset($_SESSION['AdminID']) && $config->theme != 'Bootswatch'){$nav1[$config->adminDashboard] = "ADMIN~Go to Administrative Page";}#admin page added to link only if logged in
 #nav1 is the main navigation - tilde separator below splits text of link from title attribute
-$nav1['index.php'] = "Home~A model for building largely static web pages";
-$nav1['dog-shop.php'] = "Come Get Your Dog On!";
-//$nav1['demo/demo_shared.php'] = "Shared~A demo page for building mysqli shared connection based applications.";
-//$nav1['demo/demo_pdo.php'] = "PDO~A demo page for building PDO connection based applications.";
-$nav1['demo/demo_contact.php'] = "Contact~A demo for building postback forms";
+// $nav1['index.php'] = "WELCOME~Gourmet Hot Dogs";
+$nav1['order.php'] = "ORDER~Order Your Hot Dogs Here!";
+// $nav1['hotdogs/'] = "Hot Dogs~The entrance / menu to our Food Truck App";
+// $nav1['hotdogs/order.php'] = "Menu-Order~An order page for building your cart based on your selection of dogs and toppings.";
+// $nav1['demo/demo_pdo.php'] = "PDO~A demo page for building PDO connection based applications.";
+// $nav1['demo/demo_contact.php'] = "Contact~A demo for building postback forms";
 $config->nav1 = $nav1;  #add to global config object - now available in all header/footers
 $config->tableEditor = ADMIN_PATH . 'nmEdit.php'; # Table Editor part of nmEdit package
 # CONTENT CONFIGURATION AREA (theme, content areas & nav arrays for header/footer )-----------------------------------------

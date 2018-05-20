@@ -26,7 +26,7 @@ echo "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?".">\n"; //xml uses ?, so we
 	</style>
 </head>
 <body>
-<table width="100%" cellpadding="5" cellspacing="0" margin="0">
+<table width="100%" cellpadding="5" cellspacing="0" margin="0" id="navbarColor03">
       <!-- change header color here -->
 	<tr>
 		<td colspan="3">
